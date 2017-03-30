@@ -26,24 +26,24 @@
  *
  *	Returns : VOID
  */
-function createPivotPercentFormat(columnToFilter, fieldsToApplyTo, times100=false, precision=2) {
+ function createPivotPercentFormat(columnToFilter, fieldsToApplyTo, times100=false, precision=2) {
 
-	$(`td[fidx=${columnToFilter}]`).each( (index, elem) => {
-		val= $(elem).attr('val');
-	// 	console.log(val);
-		if ( fieldsToApplyTo.indexOf(val) > -1){
-			var tr = $(elem).parent('tr');
-		//	console.log(tr);
-			$(tr).find('.p-value').each( (innerIndex, innerElem) => {
-				if (!isNaN($(innerElem).find('div').text())  && $(innerElem).find('div').text() !== '\xa0') {
-					times100 ? $(innerElem).find('div').html((parseFloat($(innerElem).find('div').text())*100).toPrecision(precision)+'%')
-						: $(innerElem).find('div').html(parseFloat($(innerElem).find('div').html()).toPrecision(precision)+'%');
+ 	$(`td[fidx=${columnToFilter}]`).each( (index, elem) => {
+ 		val= $(elem).attr('val');
+ 	// 	console.log(val);
+ 		if ( fieldsToApplyTo.indexOf(val) > -1){
+ 			var tr = $(elem).parent('tr');
+ 		//	console.log(tr);
+ 			$(tr).find('.p-value').each( (innerIndex, innerElem) => {
+ 				if (!isNaN($(innerElem).find('div').text())  && $(innerElem).find('div').text() !== '\xa0') {
+ 					times100 ? $(innerElem).find('div').html(parseFloat((parseFloat($(innerElem).find('div').text())*100).toPrecision(precision))+'%')
+ 						: $(innerElem).find('div').html(parseFloat(parseFloat($(innerElem).find('div').html()).toPrecision(precision))+'%');
 
-				}
-			})
-		}
-	})
-}
+ 				}
+ 			})
+ 		}
+ 	})
+ }
 
 /*
  *	Makes the character color of all negative values of a pivot red.
