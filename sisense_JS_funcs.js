@@ -64,6 +64,7 @@ function formatPivotNegRed() {
 			}
 		}
 	});
+}
 
 /*
  *	Makes the character color of all negative secondary indicators in a
