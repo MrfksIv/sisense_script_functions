@@ -18,10 +18,10 @@ Aspume:
  *
  * 	Parameters :
  *	
- *	columnToFilter 		: (integer) The 0-indexed number of the column in which to search for the  fields to be changed. - MANDATORY
- *	fieldsToApplyTo		: (string array)  The names of the fields that will be changed to percentage values.  - MANDATORY
- *	times100				: (boolean) If true, all values will be multiplied by 100 before appending the '%' symbol.		(default : false)
- *	precision				: (integer) The number of significant figures to round to.		(default: 2)
+ *	columnToFilter 	: (integer) The 0-indexed number of the column in which to search for the  fields to be changed. - MANDATORY
+ *	fieldsToApplyTo	: (string array)  The names of the fields that will be changed to percentage values.  - MANDATORY
+ *	times100	: (boolean) If true, all values will be multiplied by 100 before appending the '%' symbol. (default : false)
+ *	precision	: (integer) The number of significant figures to round to. (default: 2)
  * 
  *	Returns : VOID
  */
